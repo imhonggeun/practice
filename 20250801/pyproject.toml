@@ -1,9 +1,12 @@
 [project]
-name = "2025731"
+name = "20250801"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "lxml>=6.0.0",
+    "matplotlib>=3.10.5",
     "pandas>=2.3.1",
+    "streamlit>=1.47.1",
 ]
