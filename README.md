@@ -19,3 +19,15 @@ uv로 파일 실행
 # uv add matplotlib
 # uv add pandas
 # uv add streamlit
+
+fastapi 실행
+# uv run fastapi dev
+
+fastapi 실행
+# uv add fastapi --extra standard
+main.py
+from fastapi import FastAPI
+app = FastAPI()
+@app.get("/")
+def root():
+    return {"test" : 1}
