@@ -31,3 +31,9 @@ app = FastAPI()
 @app.get("/")
 def root():
     return {"test" : 1}
+
+
+정적파일 설정 main.py
+# 아래 내용 fastapi 
+# from fastapi.staticfiles import StaticFiles
+# app.mount("/",StaticFiles(directory="static", html=True), name="static")
