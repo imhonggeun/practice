@@ -40,3 +40,11 @@ def root():
 
 파일 업로드
 # uv add python-multipart
+from typing import Annotated
+from fastapi import Form
+# 추가
+from fastapi import File, UploadFile
+import os,shutil
+from fastapi.responses import FileResponse
+import mimetypes
+from uuid import uuid4
