@@ -37,3 +37,6 @@ def root():
 # 아래 내용 fastapi 
 # from fastapi.staticfiles import StaticFiles
 # app.mount("/",StaticFiles(directory="static", html=True), name="static")
+
+파일 업로드
+# uv add python-multipart
