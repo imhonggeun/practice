@@ -36,7 +36,7 @@ ctr1 = {
   ]
 }
 ctr2 = {
-  "prefix":"/ctr2", 
+  "prefix":"/2", 
   "tags":["기능2"],
   "urls" : [ 
     {

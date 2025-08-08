@@ -1,5 +1,5 @@
-def get():
-    return {"연습" : "get"}
+def get(txt):
+    return {"연습" : txt}
 
 practive = {
    "prefix":"/s2", 
@@ -10,5 +10,6 @@ practive = {
       "path":"/", 
       "endpoint": get,
     },
+    
   ]
 }
