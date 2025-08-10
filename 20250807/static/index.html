@@ -1,22 +1,61 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>이미지 업로드</title>
+  <style>
+    #imageContainer {
+      display: flex;
+      flex-direction: column; /* 새 이미지가 위로 오도록 column-reverse 제거 */
+      gap: 10px;
+      margin-top: 20px;
+    }
+    #imageContainer img {
+      max-width: 300px;
+      border: 1px solid #ccc;
+      padding: 4px;
+    }
+  </style>
 </head>
 <body>
-    <form action="/s2/" method="post" enctype="multipart/form-data" target="_blank">
-        <input type="text" name="txt" placeholder="글작성">
-        <input type="file" name="file" placeholder=/><br/>
-        <button type="submit">제출</button>
-    </form>
-    <hr/>
-    <a href="/s2/read?fileName=abc.PNG" target="_blank">이미지확인</a>
-    <hr/>
-      <form action="/s2/read" method="get">
-    <input type="text" name="fileName" required /><br/>
-    <button type="submit">이미지확인</button>
+  <form id="uploadForm" action="/s2/" method="post" enctype="multipart/form-data" target="_blank">
+    <input type="text" name="txt" placeholder="글작성" />
+    <input type="file" name="file" required />
+    <button type="submit">제출</button>
   </form>
+
+  <div id="imageContainer"></div>
+
+  <script>
+    const uploadForm = document.getElementById("uploadForm");
+    const imageContainer = document.getElementById("imageContainer");
+
+    uploadForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const formData = new FormData(uploadForm);
+
+      try {
+        const response = await fetch("/s2/", {
+          method: "POST",
+          body: formData,
+        });
+
+        const data = await response.json();
+
+        if (data.savedFile) {
+          const img = document.createElement("img");
+          img.src = `/s2/read?fileName=${data.savedFile}`;
+          img.alt = data.originalName;
+
+          // 새 이미지를 맨 위에 추가
+          imageContainer.prepend(img);
+        }
+      } catch (error) {
+        console.error("업로드 실패:", error);
+      }
+    });
+  </script>
 </body>
 </html>
