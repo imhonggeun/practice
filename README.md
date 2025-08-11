@@ -13,6 +13,9 @@
 uv로 파일 실행 
 # uv run streamlit run main.py 
 
+파이썬 실행
+# python 파일명.py
+
 패키지 설치(의존성 추가)
 # uv add pandas matplotlib streamlit lxml 이렇게도 추가 가능
 # uv add lxml
@@ -22,8 +25,9 @@ uv로 파일 실행
 
 fastapi 실행
 # uv run fastapi dev
+# uv run 파일명.py
 
-fastapi 실행
+설치
 # uv add fastapi --extra standard
 main.py
 from fastapi import FastAPI
@@ -48,3 +52,9 @@ import os,shutil
 from fastapi.responses import FileResponse
 import mimetypes
 from uuid import uuid4
+
+
+
+
+find turning 
+# uv add unsloth
