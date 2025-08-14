@@ -55,6 +55,16 @@ from uuid import uuid4
 
 
 
-
 find turning 
 # uv add unsloth
+
+13일 hugging face(LLM 파인튜닝)
+
+
+14일
+1.외부 라이브러리 설치 (비정형 문서 데이터 추출)
+# uv add "unstructured[pdf]"
+
+2.비정형 데이터를 가지고 파일로 저장한다(나중 AI파인튜닝 학습 을 하기위해서)
+
+
