@@ -20,7 +20,7 @@ uv로 파일 실행
 # uv add pandas
 # uv add streamlit
 
-https://github.com/hiedupixel
+
 | gotham | pixel | 
 |:-----:|:--------:|
 | [<img src="https://cdn.discordapp.com/attachments/1369469538168475698/1398152935296467116/f7a166b44f5fbafa.png?ex=68d36ce4&is=68d21b64&hm=564b0905924712db6f25fc7b68895bb4b5a75b95ccbaf00ff11fff052584dc82&" width="80" alt="고담팀"/>](https://github.com/CHOIBEAR) 
